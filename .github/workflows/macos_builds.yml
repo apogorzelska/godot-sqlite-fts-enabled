@@ -1,7 +1,6 @@
 name: 🍎 macOS Builds
 on:
-  push:
-    branches: [ master, main ]
+  workflow_dispatch
 
 # Global Settings
 env:
