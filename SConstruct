@@ -405,6 +405,12 @@ env.Append(CPPPATH=['src/'])
 sources = [Glob('src/*.cpp'), Glob('src/vfs/*.cpp'), 'src/sqlite/sqlite3.c']
 if env['platform'] == "javascript":
     sources.append(cpp_bindings_path + 'bin/' + cpp_bindings_libname + '.a')
+    
+###############
+#FTS5##########
+###############   
+    
+env.Append(CPPDEFINES=['SQLITE_ENABLE_FTS5']) 
 
 ###############
 #BUILD LIB#####
